@@ -15,7 +15,7 @@ public class VilleController {
 		
 	@CrossOrigin
 	@RequestMapping("/villes")
-	public List<Ville> getTopics() {
+	public List<Ville> getVilles() {
 		return villeService.getVilles();
 	}
 }
