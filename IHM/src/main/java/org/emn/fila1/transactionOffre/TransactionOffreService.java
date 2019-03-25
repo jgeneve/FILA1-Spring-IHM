@@ -22,5 +22,8 @@ public class TransactionOffreService {
 		return transactionOffreRepository.getNombreCoursesDayByStatut(statut);
 	}
 	
+	public void addTransactionOffre(TransactionOffre t) {
+		transactionOffreRepository.save(t);
+	}
 	
 }
