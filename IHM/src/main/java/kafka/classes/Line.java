@@ -1,7 +1,5 @@
 package kafka.classes;
 
-import java.sql.Timestamp;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Line {

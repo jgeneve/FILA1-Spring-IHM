@@ -1,5 +1,6 @@
 package org.emn.fila1.transactionOffre;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.transaction.Transactional;
@@ -22,8 +23,18 @@ public class TransactionOffreService {
 		return transactionOffreRepository.getNombreCoursesDayByStatut(statut);
 	}
 	
-	public void addTransactionOffre(TransactionOffre t) {
-		transactionOffreRepository.save(t);
+	public int addTransactionOffre(TransactionOffre t) {
+		TransactionOffre t_o = transactionOffreRepository.save(t);
+		return t_o.getId();
+	}
+	
+	public List<TransactionOffre> getAllPassengers() {
+		List<TransactionOffre> transactions = new ArrayList<TransactionOffre>();
+		
+		for(TransactionOffre t: transactionOffreRepository.findAll()) {
+			transactions.add(t);
+		}
+		return transactions;
 	}
 	
 }

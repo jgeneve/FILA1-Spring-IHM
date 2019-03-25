@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.emn.fila1.transactionOffre.TransactionOffre;
 import org.emn.fila1.ville.Ville;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -36,5 +37,9 @@ public class TransactionsService {
 		}
 		
 		return transactions;	
+	}
+	
+	public void addTransactions(Transactions t) {
+		transactionsRepository.save(t);
 	}
 }

@@ -15,9 +15,8 @@ public class Transactions {
 	
 	public Transactions() {}
 	
-	public Transactions(int id, String type_transaction, int transaction_id, int score) {
+	public Transactions(String type_transaction, int transaction_id, int score) {
 		super();
-		this.id = id;
 		this.type_transaction = type_transaction;
 		this.transaction_id = transaction_id;
 		this.score = score;
